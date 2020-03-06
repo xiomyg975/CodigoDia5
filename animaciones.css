@@ -1,0 +1,105 @@
+*{
+    order:0;
+    margin:0;
+}
+html,body{      
+    height :100%
+}
+.circulo{
+    width:100px;
+    height:100px;
+    background-color: rgb(192, 110, 171);
+    border-radius: 50%;
+    border:3px rgb(0, 0, 0);
+    /* animation-name:referenciar el nombre de mi animacion  */
+    animation-name: cambiarcolores;
+    /* cuanto va a durar mianimacion */
+    animation-duration: 5s;;
+    /* retraso que comience a animarse */
+    animation-delay:2s;
+    animation-timing-function:
+    cubic-bezier(0.075,0.82,0.165,1)
+}
+/* @keyframes nombreanimacion */
+@keyframes cambiarcolores{
+    /* #%(propiedad-valor) */
+    0%{
+        background-color: yellow;
+    }
+    25%{
+        background-color:skyblue;
+        /* scale , va a escalar mi elemento en valor a partir de 0 unidades */
+        transform:scale(0.5);
+    }
+    50%{
+        background-color:red;
+        transform:scale(1.3);
+    }
+    75%{
+        background-color:blue;
+        transform:scale(0.2);
+    }
+
+    100%{
+        background-color: rgb(28, 202, 121);
+    }
+}
+.cajita{
+    width: 200px;
+    height:200px;
+    border:1px solid rgb(19, 85, 228);
+    /* animation , me va  */
+    animation: transformarcaja 10s;
+}
+@keyframes transformarcaja{
+    0%{
+        background-color:rgb(170, 27, 27);
+        transform:translate(0%,0%);
+
+    }
+    25%{
+        background-color:gray;
+        border-radius:50%;
+        transform:translate(400px);
+    }
+    50%{
+        background-color: lightblue;
+        /* con 2 parametros transalate se movera en el eje x y en el eje y */
+        transform:translate(300px,500px);
+    }
+    75%{
+        background-color:purple;
+        /* rotate rotara mi elemento segun l cantidad de grados q yo le digo */
+        /* se puede combinar varias transfomaciones separadas x espacio */
+        transform:translate(200px,200px,) rotate(45deg);
+    }
+}
+.ejercicio{
+    width: 50px;
+    height:50px;
+    border:1px solid black;/* animation , me va  */
+    animation: ejercicio 10s;
+}
+@keyframes ejercicio{
+    0%{
+        border :2px solid red;
+        
+    }
+    25%{
+        transform:translate(600px,0px);
+
+    }
+    50%{
+        transform:translate(600px,400px) rotate(90deg);
+
+    }
+    75%{
+        transform:translate(0px,400px) rotate(180deg);
+
+    }
+    100%{
+        transform:translate(0px,0px) rotate(270deg);
+
+    }
+
+}

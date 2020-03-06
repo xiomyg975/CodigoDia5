@@ -1,0 +1,10 @@
+section{
+    background-color:rgb(111, 196, 230);
+}
+section img{
+    float: right;;
+
+}
+.repararfloat{
+    clear:both;
+}
